@@ -445,7 +445,7 @@ qemu_src_configure() {
 		$(conf_notuser smartcard)
 		$(conf_notuser snappy)
 		$(conf_notuser spice)
-		$(conf_notuser ssh libssh2)
+		$(conf_notuser ssh libssh)
 		$(conf_notuser usb libusb)
 		$(conf_notuser usbredir usb-redir)
 		$(conf_notuser vde)
