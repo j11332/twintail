@@ -9,8 +9,8 @@
 			<email>harasawaj11332@gmail.com</email>
 			<name>Harasawa</name>
 		</owner>
-		<source type="git">git@github.com:j11332/rockchip-gentoo.git</source>
-		<source type="git">git+ssh://git@github.com:j11332/rockchip-gentoo.git</source>
-		<feed>https://github.com/j11332/rockchip-gentoo/commits/master.atom</feed>
+		<source type="git">git@github.com:j11332/twintail.git</source>
+		<source type="git">git+ssh://git@github.com:j11332/twintail.git</source>
+		<feed>https://github.com/j11332/twintail/commits/master.atom</feed>
 	</repo>
 </repositories>
