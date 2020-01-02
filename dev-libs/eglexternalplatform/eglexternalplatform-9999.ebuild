@@ -6,8 +6,8 @@ EAPI=7
 DESCRIPTION="Wayland protocol files"
 HOMEPAGE="https://wayland.freedesktop.org/"
 
-inherit git-r3
 EGIT_REPO_URI="https://github.com/NVIDIA/${PN}"
+inherit git-r3
 
 LICENSE="MIT"
 SLOT="0"
