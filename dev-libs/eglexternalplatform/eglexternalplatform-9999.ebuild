@@ -7,7 +7,7 @@ DESCRIPTION="Wayland protocol files"
 HOMEPAGE="https://wayland.freedesktop.org/"
 
 inherit git-r3
-EGIT_REPO_URI="https://github.com/NVIDIA/${PN}.git/"
+EGIT_REPO_URI="https://github.com/NVIDIA/${PN}"
 
 LICENSE="MIT"
 SLOT="0"
