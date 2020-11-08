@@ -8,11 +8,11 @@ inherit bash-completion-r1 golang-base linux-info systemd
 DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
 
-MY_S="${S}/src/github.com/j11332/${PN}"
-
+MY_S="${S}/src/github.com/snapcore/${PN}"
+PATCHES=("${FILESDIR}/libexecdir.patch")
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/j11332/${PN}.git"
+	EGIT_REPO_URI="https://github.com/snapcore/${PN}.git"
 	EGIT_BRANCH="master"
 	EGIT_CHECKOUT_DIR="${MY_S}"
 	LIVE_DEPEND="dev-go/govendor"
@@ -45,7 +45,7 @@ CONFIG_CHECK="	CGROUPS \
 
 export GOPATH="${S}"
 
-EGO_PN="github.com/j11332/${PN}"
+EGO_PN="github.com/snapcore/${PN}"
 
 RDEPEND="!sys-apps/snap-confine
 	sys-libs/libseccomp[static-libs]
@@ -206,7 +206,7 @@ src_install() {
 	doexe "${C}"/snap-confine/snap-device-helper
 	exeopts -m 6755
 	doexe "${C}"/snap-confine/snap-confine
-	# dosym "${EPREFIX}/usr/$(get_libdir)/snapd" /usr/lib/snapd
+	dosym "${EPREFIX}/usr/$(get_libdir)/snapd" /usr/lib/snapd
 }
 
 pkg_postinst() {
