@@ -13,7 +13,7 @@ MY_S="${S}/src/github.com/j11332/${PN}"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/j11332/${PN}.git"
-	EGIT_BRANCH="gentoo"
+	EGIT_BRANCH="master"
 	EGIT_CHECKOUT_DIR="${MY_S}"
 	LIVE_DEPEND="dev-go/govendor"
 else
