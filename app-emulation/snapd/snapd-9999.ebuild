@@ -45,7 +45,7 @@ CONFIG_CHECK="	CGROUPS \
 
 export GOPATH="${S}"
 
-EGO_PN="github.com/snapcore/${PN}"
+EGO_PN="github.com/j11332/${PN}"
 
 RDEPEND="!sys-apps/snap-confine
 	sys-libs/libseccomp[static-libs]
