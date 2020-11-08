@@ -9,13 +9,14 @@ DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
 
 MY_S="${S}/src/github.com/snapcore/${PN}"
-PATCHES=("${FILESDIR}/libexecdir.patch")
+
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/snapcore/${PN}.git"
 	EGIT_BRANCH="master"
 	EGIT_CHECKOUT_DIR="${MY_S}"
 	LIVE_DEPEND="dev-go/govendor"
+	KEYWORDS=""
 else
 	inherit golang-vcs-snapshot
 	SRC_URI="https://github.com/snapcore/${PN}/releases/download/${PV}/${PN}_${PV}.vendor.tar.xz -> ${P}.tar.xz"
@@ -206,7 +207,7 @@ src_install() {
 	doexe "${C}"/snap-confine/snap-device-helper
 	exeopts -m 6755
 	doexe "${C}"/snap-confine/snap-confine
-	dosym "${EPREFIX}/usr/$(get_libdir)/snapd" /usr/lib/snapd
+# 	dosym "${EPREFIX}/usr/$(get_libdir)/snapd" /usr/lib/snapd
 }
 
 pkg_postinst() {
